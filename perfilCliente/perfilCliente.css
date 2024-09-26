@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.perfil-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.foto-perfil {
+    flex: 0 0 150px;
+    margin-right: 20px;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #007bff;
+}
+
+.info-perfil {
+    flex: 1;
+}
+
+.info-perfil h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.info-perfil p {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.info-perfil button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.info-perfil button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.info-perfil button:active {
+    background-color: #004494;
+    transform: scale(0.98);
+}
+
+.produtos-container {
+    margin-top: 20px;
+}
+
+.produtos-container h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.produto-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.produto-card:last-child {
+    border-bottom: none;
+}
+
+.produto-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.produto-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.produto-card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.produto-card button:hover {
+    background-color: #218838;
+}

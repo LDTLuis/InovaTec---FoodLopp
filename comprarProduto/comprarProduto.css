@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.produto-info {
+    margin-bottom: 20px;
+}
+
+.produto-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.produto-info strong {
+    color: #333;
+    font-weight: normal;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

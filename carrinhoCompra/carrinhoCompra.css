@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.carrinho-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.carrinho-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.carrinho-tabela th, .carrinho-tabela td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.carrinho-tabela th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.carrinho-tabela tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.carrinho-tabela td button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.carrinho-tabela td button:hover {
+    background-color: #c0392b;
+}
+
+.total-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.total-container p {
+    font-size: 20px;
+    color: #333;
+}
+
+.actions {
+    text-align: center;
+}
+
+.actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.actions button:hover {
+    background-color: #0056b3;
+}

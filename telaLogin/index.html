@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Digite seu email" required>
+            
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+        <div class="register-link">
+            <p>Não tem uma conta? <a href="/telaCadastro/cadastro.html">Cadastre-se</a></p>
+        </div>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
