@@ -5,24 +5,25 @@ const vendedores = [
         cidade: "São Paulo",
         estado: "SP",
         telefone: "(11) 99999-9999",
-        foto: "joao-silva.jpg" // Exemplo de caminho para a foto
+        foto: "../fotos/usuarioImage.png" // Exemplo de caminho para a foto
     },
     {
         nome: "Maria Oliveira",
         cidade: "Rio de Janeiro",
         estado: "RJ",
         telefone: "(21) 88888-8888",
-        foto: "maria-oliveira.jpg" // Exemplo de caminho para a foto
+        foto: "../fotos/usuarioImage.png" // Exemplo de caminho para a foto
     },
     {
         nome: "Carlos Pereira",
         cidade: "Belo Horizonte",
         estado: "MG",
         telefone: "(31) 77777-7777",
-        foto: "carlos-pereira.jpg" // Exemplo de caminho para a foto
+        foto: "../fotos/usuarioImage.png" // Exemplo de caminho para a foto
     }
 ];
 
+// Quando a página carregar, exibe as informações do vendedor
 window.onload = function() {
     const params = new URLSearchParams(window.location.search);
     const vendedorNome = decodeURIComponent(params.get('vendedor'));
