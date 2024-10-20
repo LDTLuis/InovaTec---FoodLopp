@@ -14,11 +14,18 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.fas.fa-shopping-cart {
+    font-size: 32px; /* Tamanho do ícone */
+    color: #333;  /* Cor do ícone */
+}
+
 h1 {
     font-size: 28px;
     color: #333;
     margin-bottom: 20px;
     text-align: center;
+    gap: 10px;
+    
 }
 
 .carrinho-tabela {
@@ -70,7 +77,7 @@ h1 {
 }
 
 .actions button {
-    background-color: #007bff;
+    background-color: #218838;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -82,5 +89,5 @@ h1 {
 }
 
 .actions button:hover {
-    background-color: #0056b3;
+    background-color: #218838;
 }

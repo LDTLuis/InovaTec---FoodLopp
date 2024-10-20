@@ -11,7 +11,7 @@ body {
 
 .login-container {
     background-color: white;
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
@@ -25,21 +25,25 @@ body {
 
 .login-container input[type="email"],
 .login-container input[type="password"] {
-    width: 100%;
+    width: 100%; /* Garante que ocupe 100% da largura do container */
     padding: 10px;
-    margin: 10px 0;
+    margin-bottom: 15px; /* Ajusta o espaçamento inferior */
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo de largura */
 }
 
 .login-container button {
-    width: 100%;
+    width: 100%; /* Garante que o botão ocupe toda a largura do container */
     padding: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    margin-top: 10px; /* Adiciona um pequeno espaçamento acima do botão */
+    box-sizing: border-box;
 }
 
 .login-container button:hover {

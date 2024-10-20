@@ -39,7 +39,7 @@ h1 {
 button {
     display: block;
     width: 100%;
-    background-color: #007bff;
+    background-color: #218838;
     color: #ffffff;
     border: none;
     padding: 12px;
@@ -52,5 +52,5 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #218838;
 }
