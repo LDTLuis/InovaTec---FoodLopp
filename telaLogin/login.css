@@ -1,21 +1,53 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.login-container {
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* Login e Informações sobre o site */
+.login-container, .info-container {
     background-color: white;
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+    flex: 1;
+}
+
+/* Estilo para o conteúdo da info-container */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.info-container h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.info-container .logo {
+    display: block;
+    margin: 15px auto 0;
+    max-width: 80px;
 }
 
 .login-container h2 {
@@ -25,25 +57,21 @@ body {
 
 .login-container input[type="email"],
 .login-container input[type="password"] {
-    width: 100%; /* Garante que ocupe 100% da largura do container */
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px; /* Ajusta o espaçamento inferior */
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Inclui o padding e a borda no cálculo de largura */
 }
 
 .login-container button {
-    width: 100%; /* Garante que o botão ocupe toda a largura do container */
+    width: 100%;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center;
-    margin-top: 10px; /* Adiciona um pequeno espaçamento acima do botão */
-    box-sizing: border-box;
 }
 
 .login-container button:hover {
@@ -63,4 +91,12 @@ body {
 
 .register-link a:hover {
     text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 }

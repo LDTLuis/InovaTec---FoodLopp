@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login</title>
+    <title>FoodLoop - Login</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../fotos/FoodLoop Logo 2.png">
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Entrar no FoodLoop</h2>
-        <form id="loginForm">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Digite seu email" required>
-            
-            <label for="password">Senha</label>
-            <input type="password" id="password" placeholder="Digite sua senha" required>
-            
-            <button type="submit">Entrar</button>
-        </form>
-        <div class="register-link">
-            <p>Não tem uma conta? <a href="/telaCadastro/cadastro.html">Cadastre-se</a></p>
+    <div class="container">
+        <div class="info-container">
+            <h2>Sobre o FoodLoop</h2>
+            <p>O FoodLoop é um aplicativo dedicado a reduzir o desperdício de alimentos, conectando consumidores com vendedores locais. Navegue por produtos frescos, economize dinheiro e ajude o meio ambiente!</p>
+            <img src="../fotos/FoodLoop Logo 2.png" alt="Logo do FoodLoop" class="logo">
         </div>
-        <p id="error-message" class="error-message"></p>
+        
+        <div class="login-container">
+            <h2>Entrar no FoodLoop</h2>
+            <form id="loginForm">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Digite seu email" required>
+                
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+                
+                <button type="submit">Entrar</button>
+            </form>
+            <div class="register-link">
+                <p>Não tem uma conta? <a href="/telaCadastro/cadastro.html">Cadastre-se</a></p>
+            </div>
+            <p id="error-message" class="error-message"></p>
+        </div>
     </div>
-
     <script src="login.js"></script>
 </body>
 </html>
