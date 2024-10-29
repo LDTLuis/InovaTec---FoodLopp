@@ -1,0 +1,8 @@
+[build]
+  publish = "build" # Diretório de publicação (ajuste para o seu projeto, ex.: 'dist' para Vite/Vue)
+  command = "npm run build" # Comando de build do projeto
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

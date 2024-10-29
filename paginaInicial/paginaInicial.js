@@ -7,8 +7,9 @@ const produtos = [
         cidade: "São Paulo",
         estado: "SP",
         delivery: "sim",
-        validade: "2024-12-31",
-        vendedor: "João Silva"
+        validade: "01/11/2024",
+        vendedor: "João Silva",
+        imagem: "../fotos/arrozIntegral.jpg"
     },
     {
         id: 2,
@@ -17,8 +18,9 @@ const produtos = [
         cidade: "Rio de Janeiro",
         estado: "RJ",
         delivery: "não",
-        validade: "2024-11-30",
-        vendedor: "Maria Oliveira"
+        validade: "05/11/2024",
+        vendedor: "Maria Oliveira",
+        imagem: "../fotos/feijaoPreto.jpg"
     },
     {
         id: 3,
@@ -27,8 +29,9 @@ const produtos = [
         cidade: "Belo Horizonte",
         estado: "MG",
         delivery: "sim",
-        validade: "2025-06-15",
-        vendedor: "Carlos Pereira"
+        validade: "08/11/2024",
+        vendedor: "Carlos Pereira",
+        imagem: "../fotos/acucarMascavo.jpg"
     }
 ];
 
@@ -48,7 +51,7 @@ document.getElementById('filtrarButton').addEventListener('click', function() {
             (cidade === '' || produto.cidade.toLowerCase().includes(cidade)) &&
             (estado === '' || produto.estado.toLowerCase().includes(estado)) &&
             (delivery === '' || produto.delivery === delivery) &&
-            (validade === '' || produto.validade >= validade) &&
+            (validade === '' || new Date(produto.validade) >= new Date(validade)) &&
             (vendedor === '' || produto.vendedor.toLowerCase().includes(vendedor))
         );
     });
@@ -70,6 +73,7 @@ function mostrarProdutos(produtos) {
         card.className = 'produto-card';
 
         card.innerHTML = `
+            <img src="${produto.imagem}" alt="${produto.nome}" class="produto-imagem">
             <h3><a href="../comprarProduto/comprarProduto.html?id=${produto.id}">${produto.nome}</a></h3>
             <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
             <p>Cidade: ${produto.cidade}</p>
