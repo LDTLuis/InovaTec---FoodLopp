@@ -4,9 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodLoop - Login</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="../fotos/FoodLoop Logo 2.png">
-    <link rel="stylesheet" href="login.css">
+    <style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        /* Login e Informações sobre o site */
+        .login-container, .info-container {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        /* Estilo para o conteúdo da info-container */
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: justify;
+        }
+
+        .info-container h2 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .info-container .logo {
+            display: block;
+            margin: 15px auto 0;
+            max-width: 80px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -15,7 +124,7 @@
             <p>O FoodLoop é um aplicativo dedicado a reduzir o desperdício de alimentos, conectando consumidores com vendedores locais. Navegue por produtos frescos, economize dinheiro e ajude o meio ambiente!</p>
             <img src="../fotos/FoodLoop Logo 2.png" alt="Logo do FoodLoop" class="logo">
         </div>
-        
+
         <div class="login-container">
             <h2>Entrar no FoodLoop</h2>
             <form id="loginForm">
@@ -33,6 +142,28 @@
             <p id="error-message" class="error-message"></p>
         </div>
     </div>
-    <script src="login.js"></script>
+    <script>
+        // Dados estáticos para email e senha predefinidos
+        const predefinedEmail = "admin@exemplo.com";
+        const predefinedPassword = "admin123";
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do form
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Verifica se o email e senha estão corretos
+            if (email === predefinedEmail && password === predefinedPassword) {
+                // Redireciona para a página inicial se o login for bem-sucedido
+                window.location.href = "/paginaInicial/paginaInicial.html";
+            } else {
+                // Exibe mensagem de erro se os dados estiverem incorretos
+                errorMessage.textContent = "Email ou senha incorretos!";
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
