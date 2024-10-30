@@ -9,7 +9,6 @@ document.getElementById('cadastrarProdutoForm').addEventListener('submit', funct
     const delivery = document.getElementById('delivery').value;
     const preco = parseFloat(document.getElementById('preco').value);
 
-    // Simula a ação de cadastro
     console.log({
         nome,
         marca,
@@ -20,6 +19,11 @@ document.getElementById('cadastrarProdutoForm').addEventListener('submit', funct
         preco
     });
 
-    // Aqui você pode adicionar o código para enviar os dados para um backend
     alert('Produto cadastrado com sucesso!');
+});
+
+// Exibe o nome do arquivo selecionado para upload
+document.getElementById('foto').addEventListener('change', function() {
+    const fileName = this.files[0] ? this.files[0].name : 'Nenhum arquivo selecionado';
+    document.getElementById('file-name').textContent = fileName;
 });
