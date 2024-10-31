@@ -7,7 +7,7 @@ const produtos = [
         cidade: "São Paulo",
         estado: "SP",
         delivery: "sim",
-        validade: "2024-12-31",
+        validade: "01/11/2024",
         vendedor: "João Silva",
         imagem: "../fotos/arrozIntegral.jpg"
     },
@@ -19,7 +19,7 @@ const produtos = [
         cidade: "Rio de Janeiro",
         estado: "RJ",
         delivery: "não",
-        validade: "2024-11-30",
+        validade: "05/11/2024",
         vendedor: "Maria Oliveira",
         imagem: "../fotos/feijaoPreto.jpg"
     },
@@ -31,7 +31,7 @@ const produtos = [
         cidade: "Belo Horizonte",
         estado: "MG",
         delivery: "sim",
-        validade: "2025-06-15",
+        validade: "08/11/2024",
         vendedor: "Carlos Pereira",
         imagem: "../fotos/acucarMascavo.jpg"
     }
