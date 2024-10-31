@@ -22,7 +22,6 @@ document.getElementById('cadastrarProdutoForm').addEventListener('submit', funct
     alert('Produto cadastrado com sucesso!');
 });
 
-// Exibe o nome do arquivo selecionado para upload
 document.getElementById('foto').addEventListener('change', function() {
     const fileName = this.files[0] ? this.files[0].name : 'Nenhum arquivo selecionado';
     document.getElementById('file-name').textContent = fileName;

@@ -1,4 +1,3 @@
-// Dados fictícios dos produtos
 const produtos = [
     {
         id: 1,
@@ -88,5 +87,4 @@ function mostrarProdutos(produtos) {
     });
 }
 
-// Mostrar todos os produtos ao carregar a página
 mostrarProdutos(produtos);

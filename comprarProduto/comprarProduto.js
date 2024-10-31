@@ -1,4 +1,3 @@
-// Simula os dados dos produtos (você pode substituir isso por uma chamada a um backend)
 const produtos = [
     {
         id: 1,
@@ -9,7 +8,8 @@ const produtos = [
         estado: "SP",
         delivery: "sim",
         validade: "2024-12-31",
-        vendedor: "João Silva"
+        vendedor: "João Silva",
+        imagem: "../fotos/arrozIntegral.jpg"
     },
     {
         id: 2,
@@ -20,7 +20,8 @@ const produtos = [
         estado: "RJ",
         delivery: "não",
         validade: "2024-11-30",
-        vendedor: "Maria Oliveira"
+        vendedor: "Maria Oliveira",
+        imagem: "../fotos/feijaoPreto.jpg"
     },
     {
         id: 3,
@@ -31,7 +32,8 @@ const produtos = [
         estado: "MG",
         delivery: "sim",
         validade: "2025-06-15",
-        vendedor: "Carlos Pereira"
+        vendedor: "Carlos Pereira",
+        imagem: "../fotos/acucarMascavo.jpg"
     }
 ];
 
@@ -55,6 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('produtoValidade').textContent = produto.validade;
             document.getElementById('vendedorLink').textContent = produto.vendedor;
             document.getElementById('vendedorLink').href = `../perfilCliente/perfilCliente.html?vendedor=${encodeURIComponent(produto.vendedor)}`;
+
+            document.getElementById('produtoImagem').src = produto.imagem;
+            document.getElementById('produtoImagem').alt = produto.nome;
         } else {
             document.querySelector('.container').innerHTML = '<p>Produto não encontrado.</p>';
         }

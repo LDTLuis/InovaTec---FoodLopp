@@ -2,7 +2,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/fireba
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js"
 import { getFireStore, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-getfirestore.js"
 
-// Adicione a configuração do Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCQieSmDEqcrR4lO46bL0Ho5IRO8hQ30Hw",
     authDomain: "inova-tec-2.firebaseapp.com",
@@ -12,12 +11,10 @@ const firebaseConfig = {
     appId: "1:763430227281:web:0c49b3575a62e494d8d770"
   };
 
-// Inicializa o Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-// Captura o evento de submit do formulário
 document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault();
     if (!validateForm()) return;
@@ -31,10 +28,8 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const state = document.getElementById('state').value;
     const birthdate = document.getElementById('birthdate').value;
 
-    // Cadastra o usuário com email e senha no Firebase Authentication
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Armazena os dados adicionais no Firestore
             const user = userCredential.user;
             return db.collection('users').doc(user.uid).set({
                 fullName: fullName,
@@ -55,7 +50,6 @@ document.getElementById('registerForm').addEventListener('submit', function(even
         });
 });
 
-// Funções de validação (já implementadas anteriormente)
 function validateForm() {
     const fullName = document.getElementById('fullName').value;
     const password = document.getElementById('password').value;
@@ -71,12 +65,10 @@ function validateForm() {
         return false;
     }
 
-    // Continue com as outras validações como CPF, telefone, etc.
     return true;
 }
 
 function validateFullName(fullName) {
-    // Verifica se o nome completo contém pelo menos 2 palavras com 2 caracteres cada
     const nameParts = fullName.trim().split(" ");
     return nameParts.length >= 2 && nameParts.every(part => part.length > 1);
 }

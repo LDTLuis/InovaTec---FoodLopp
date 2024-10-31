@@ -33,11 +33,12 @@ body {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ajusta a largura para 90% da tela */
 }
 
 .fas.fa-shopping-cart {
-    font-size: 32px; /* Tamanho do ícone */
-    color: #333;  /* Cor do ícone */
+    font-size: 32px;
+    color: #333;
 }
 
 h1 {
@@ -46,7 +47,6 @@ h1 {
     margin-bottom: 20px;
     text-align: center;
     gap: 10px;
-    
 }
 
 .carrinho-tabela {
@@ -55,7 +55,8 @@ h1 {
     margin-bottom: 20px;
 }
 
-.carrinho-tabela th, .carrinho-tabela td {
+.carrinho-tabela th,
+.carrinho-tabela td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: center;
@@ -111,4 +112,78 @@ h1 {
 
 .actions button:hover {
     background-color: #218838;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carrinho-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .carrinho-tabela th,
+    .carrinho-tabela td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .carrinho-tabela {
+        font-size: 14px;
+    }
+
+    .total-container p {
+        font-size: 18px;
+    }
+
+    .actions button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .total-container p {
+        font-size: 16px;
+    }
+
+    .actions button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .carrinho-tabela th,
+    .carrinho-tabela td {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    /* Transformar tabela em lista para dispositivos móveis */
+    .carrinho-tabela, .carrinho-tabela thead, .carrinho-tabela tbody, .carrinho-tabela th, .carrinho-tabela td, .carrinho-tabela tr {
+        display: block;
+    }
+
+    .carrinho-tabela tr {
+        margin-bottom: 10px;
+    }
+
+    .carrinho-tabela td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .carrinho-tabela td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
 }
